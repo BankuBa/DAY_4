@@ -1,0 +1,57 @@
+*{margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background:  rgb(75, 75, 78);
+}
+
+.container{
+width: 70vw;
+height: 35vh;
+background: #ccc;
+border-radius: 10px;
+position: relative;
+}
+
+.clip{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: all 5s;
+  transition: all 0.5s;
+
+}
+
+.clip1{
+  background: url(img/pexels-doubleseven-2332737.jpg);
+  background-position: center;
+  background-size: cover;
+clip-path: polygon(100% 0, 100% 100%, 45% 50%);
+}
+
+.clip2{
+  background: url(img/pexels-sigrid-de-greef-1631075-3124111.jpg);
+  background-position: center;
+  background-size: cover;
+clip-path: polygon(0 0, 0 100%, 50% 50%);
+}
+
+.clip3{
+  background: url(img/pexels-thanhhoa-tran-640546-1564473.jpg);
+  background-position: center;
+  background-size: cover;
+  clip-path: polygon(100% 0, 49% 51%, 100% 100%, 0 100%, 49% 51%, 0 0);
+}
+.container:hover .clip {
+  clip-path: polygon(100% 0 , 100% 0 , 100% 100%, 100% 100%);
+}
+
+ .container .clip:hover{
+clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
